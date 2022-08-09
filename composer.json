@@ -1,0 +1,55 @@
+{
+    "name": "tvdr/picsum-placeholder",
+    "description": "a simple way to use Picsum.photos in your Laravel app.",
+    "version": "1.0.0",
+    "keywords": [
+        "tvdr",
+        "picsum-placeholder"
+    ],
+    "homepage": "https://github.com/tvdr/picsum-placeholder",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Tibor Barta",
+            "email": "tiborbarta87@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tvdr\\PicsumPlaceholder\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tvdr\\PicsumPlaceholder\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tvdr\\PicsumPlaceholder\\PicsumPlaceholderServiceProvider"
+            ],
+            "aliases": {
+                "PicsumPlaceholder": "Tvdr\\PicsumPlaceholder\\PicsumPlaceholderFacade"
+            }
+        }
+    }
+}
